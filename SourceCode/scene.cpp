@@ -55,7 +55,7 @@ void SceneManager::execute(Scene* scene)
 // ƒQ[ƒ€ƒ‰ƒCƒuƒ‰ƒŠ‚Ì‰Šú‰»ˆ—
     int w = static_cast<int>(SCREEN_W);
     int h = static_cast<int>(SCREEN_H);
-    GameLib::init(L"ELECTRIC PARY", w, h, isFullScreen);
+    GameLib::init(L"game2-2", w, h, isFullScreen);
     audio_init();
     GameLib::music::update();
 

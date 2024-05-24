@@ -4,7 +4,9 @@
 #include"retry.h"
 #include"clear.h"
 #include"player.h"
-
+#include "../GameLib/game_lib.h"
+#include "../GameLib/input_manager.h"
+#include "../GameLib/obj2d_data.h"
 #include"ui.h"
 #include"sprite_data.h"
 #include"bg.h"
@@ -95,7 +97,7 @@ void Game::update()
         player_ = obj2dManager()->add(
             std::make_shared<OBJ2D>(),
             walkPlayerBehavior,
-            VECTOR2(-400, 1080 / 2)
+            VECTOR2(0, 1080 / 2)
         );
         player_->addComponent<Renderer>();
         player_->addComponent<Collider>();
@@ -108,6 +110,8 @@ void Game::update()
         player_->getComponent<ActorComponent>()->hit_timer_ = 0;
        
         player_->getComponent<ActorComponent>()->isAlive_ = true;
+        state_++;
+        break;
           // ‰Šú‰»ˆ—‚ÌI—¹
         /*fallthrough*/
 
@@ -146,21 +150,26 @@ void Game::draw()
 {
     // ‰æ–ÊƒNƒŠƒA
     GameLib::clear(VECTOR4(0, 0, 1, 1));
-    DepthStencil::instance().set(DepthStencil::MODE::NONE);
-    DepthStencil::instance().set(DepthStencil::MODE::MASK);
+    //DepthStencil::instance().set(DepthStencil::MODE::NONE);
+    //DepthStencil::instance().set(DepthStencil::MODE::MASK);
 
-    DepthStencil::instance().set(DepthStencil::MODE::APPLY_MASK);
+    //DepthStencil::instance().set(DepthStencil::MODE::APPLY_MASK);
 
    
-
-    obj2dManager()->draw(bg()->getScrollPos());
-
-
-
+   // GameLib::primitive::circle(player_->transform_->position_, 20, { 1,1 }, 0, { 1,1,1,1 });
+    //obj2dManager()->draw(bg()->getScrollPos());
+    GameLib::primitive::line(50, 400, 500, 100, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(500, 100, 700, 270, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(700, 270, 800, 400, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(800, 400, 900, 300, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(900, 300, 1000, 400, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(1000, 400, 1200, 100, 0, 1, 0, 1, 10);
+    GameLib::primitive::line(1200, 100, 1300, 900, 0, 1, 0, 1, 10);
+    
 
 
   
-    DepthStencil::instance().set(DepthStencil::MODE::EXCLUSIVE);
+    //DepthStencil::instance().set(DepthStencil::MODE::EXCLUSIVE);
 }
 
 void Game::judge()
