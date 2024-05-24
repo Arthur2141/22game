@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GameLib\sprite.cpp" />
+    <ClCompile Include="SourceCode\actor.cpp" />
+    <ClCompile Include="SourceCode\bg.cpp" />
+    <ClCompile Include="SourceCode\clear.cpp" />
+    <ClCompile Include="SourceCode\game.cpp" />
+    <ClCompile Include="SourceCode\main.cpp" />
+    <ClCompile Include="SourceCode\obj2d.cpp" />
+    <ClCompile Include="SourceCode\player.cpp" />
+    <ClCompile Include="SourceCode\scene.cpp" />
+    <ClCompile Include="SourceCode\sprite_data.cpp" />
+    <ClCompile Include="SourceCode\ui.cpp" />
+    <ClCompile Include="SourceCode\math.cpp" />
+    <ClCompile Include="GameLib\debug.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\depth_stencil.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\dxtk_audio.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\font.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\frame_rate.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\game_lib.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\input_manager.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\obj2d_data.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\primitive.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\resource_manager.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\texture.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\vector.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\view_settings.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLib\wnd_proc.cpp">
+      <Filter>GameLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\track.cpp" />
+    <ClCompile Include="SourceCode\retry.cpp" />
+    <ClCompile Include="SourceCode\audio.cpp" />
+    <ClCompile Include="SourceCode\title.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameLib\sprite.h" />
+    <ClInclude Include="SourceCode\actor.h" />
+    <ClInclude Include="SourceCode\bg.h" />
+    <ClInclude Include="SourceCode\clear.h" />
+    <ClInclude Include="SourceCode\collider.h" />
+    <ClInclude Include="SourceCode\common.h" />
+    <ClInclude Include="SourceCode\constants.h" />
+    <ClInclude Include="SourceCode\obj2d.h" />
+    <ClInclude Include="SourceCode\player.h" />
+    <ClInclude Include="SourceCode\scene.h" />
+    <ClInclude Include="SourceCode\sprite_data.h" />
+    <ClInclude Include="SourceCode\title.h" />
+    <ClInclude Include="SourceCode\ui.h" />
+    <ClInclude Include="SourceCode\math.h" />
+    <ClInclude Include="GameLib\debug.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\depth_stencil.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\dxtk_audio.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\font.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\frame_rate.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\game_lib.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\high_resolution_timer.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\input_manager.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\obj2d_data.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\misc.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\primitive.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\resource_manager.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\system.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\texture.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\vector.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\view_settings.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\util.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLib\blender.h">
+      <Filter>GameLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCode\track.h" />
+    <ClInclude Include="SourceCode\retry.h" />
+    <ClInclude Include="SourceCode\audio.h" />
+    <ClInclude Include="SourceCode\game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GameLib">
+      <UniqueIdentifier>{efad0855-57da-49df-94e6-9bd96f38aba8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
