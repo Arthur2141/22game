@@ -103,7 +103,7 @@ void Game::update()
         player_->addComponent<Collider>();
         player_->addComponent<ActorComponent>();
        
-
+        
         bg()->init(&player_->transform_->position_);
        
     

@@ -59,6 +59,7 @@
     <ClCompile Include="SourceCode\retry.cpp" />
     <ClCompile Include="SourceCode\audio.cpp" />
     <ClCompile Include="SourceCode\title.cpp" />
+    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameLib\sprite.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="SourceCode\retry.h" />
     <ClInclude Include="SourceCode\audio.h" />
     <ClInclude Include="SourceCode\game.h" />
+    <ClInclude Include="stage.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameLib">

@@ -55,6 +55,7 @@
     <ClInclude Include="SourceCode\title.h" />
     <ClInclude Include="SourceCode\track.h" />
     <ClInclude Include="SourceCode\ui.h" />
+    <ClInclude Include="stage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLib\debug.cpp" />
@@ -87,6 +88,7 @@
     <ClCompile Include="SourceCode\title.cpp" />
     <ClCompile Include="SourceCode\track.cpp" />
     <ClCompile Include="SourceCode\ui.cpp" />
+    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
