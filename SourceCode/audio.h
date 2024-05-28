@@ -14,3 +14,4 @@ const int SE_ENEMY_DEATH = 7;
 const int SE_ENEMY_DAMAGE = 8;
 const int MUSIC_GAMEOVER = 9;
 const int MUSIC_GAMECLEAR = 10;
+//qqq
