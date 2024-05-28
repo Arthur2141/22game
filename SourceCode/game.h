@@ -10,7 +10,7 @@ private:
     UI*           ui_;
     
     static Game     instance_;
-    
+    //aababa
 public:
   
     std::shared_ptr<OBJ2D> player_;
