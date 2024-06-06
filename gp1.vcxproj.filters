@@ -59,7 +59,9 @@
     <ClCompile Include="SourceCode\retry.cpp" />
     <ClCompile Include="SourceCode\audio.cpp" />
     <ClCompile Include="SourceCode\title.cpp" />
-    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="SourceCode\tutorial.cpp" />
+    <ClCompile Include="SourceCode\gameover.cpp" />
+    <ClCompile Include="SourceCode\result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameLib\sprite.h" />
@@ -134,7 +136,9 @@
     <ClInclude Include="SourceCode\retry.h" />
     <ClInclude Include="SourceCode\audio.h" />
     <ClInclude Include="SourceCode\game.h" />
-    <ClInclude Include="stage.h" />
+    <ClInclude Include="SourceCode\tutorial.h" />
+    <ClInclude Include="SourceCode\gameover.h" />
+    <ClInclude Include="SourceCode\result.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameLib">

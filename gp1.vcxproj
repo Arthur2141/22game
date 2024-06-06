@@ -46,16 +46,18 @@
     <ClInclude Include="SourceCode\common.h" />
     <ClInclude Include="SourceCode\constants.h" />
     <ClInclude Include="SourceCode\game.h" />
+    <ClInclude Include="SourceCode\gameover.h" />
     <ClInclude Include="SourceCode\math.h" />
     <ClInclude Include="SourceCode\obj2d.h" />
     <ClInclude Include="SourceCode\player.h" />
+    <ClInclude Include="SourceCode\result.h" />
     <ClInclude Include="SourceCode\retry.h" />
     <ClInclude Include="SourceCode\scene.h" />
     <ClInclude Include="SourceCode\sprite_data.h" />
     <ClInclude Include="SourceCode\title.h" />
     <ClInclude Include="SourceCode\track.h" />
+    <ClInclude Include="SourceCode\tutorial.h" />
     <ClInclude Include="SourceCode\ui.h" />
-    <ClInclude Include="stage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLib\debug.cpp" />
@@ -78,17 +80,19 @@
     <ClCompile Include="SourceCode\bg.cpp" />
     <ClCompile Include="SourceCode\clear.cpp" />
     <ClCompile Include="SourceCode\game.cpp" />
+    <ClCompile Include="SourceCode\gameover.cpp" />
     <ClCompile Include="SourceCode\main.cpp" />
     <ClCompile Include="SourceCode\math.cpp" />
     <ClCompile Include="SourceCode\obj2d.cpp" />
     <ClCompile Include="SourceCode\player.cpp" />
+    <ClCompile Include="SourceCode\result.cpp" />
     <ClCompile Include="SourceCode\retry.cpp" />
     <ClCompile Include="SourceCode\scene.cpp" />
     <ClCompile Include="SourceCode\sprite_data.cpp" />
     <ClCompile Include="SourceCode\title.cpp" />
     <ClCompile Include="SourceCode\track.cpp" />
+    <ClCompile Include="SourceCode\tutorial.cpp" />
     <ClCompile Include="SourceCode\ui.cpp" />
-    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -153,6 +157,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>GameLib\Lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DirectXTK.lib;DirectXTKAudioWin8.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -170,6 +176,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>GameLib\Lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DirectXTK.lib;DirectXTKAudioWin8.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

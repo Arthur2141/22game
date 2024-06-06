@@ -1,12 +1,17 @@
 #include"game.h"
-#include"../GameLib/game_lib.h"
+#include <DirectXMath.h>
+//#include"../GameLib/game_lib.h"
+//#include"../GameLib/game_lib.h"
+#include "../GameLib/input_manager.h"
+#include "../GameLib/obj2d_data.h"
+#include "../GameLib/depth_stencil.h"
 #include"title.h"
+#include"result.h"
+#include"gameover.h"
 #include"retry.h"
 #include"clear.h"
 #include"player.h"
-#include "../GameLib/game_lib.h"
-#include "../GameLib/input_manager.h"
-#include "../GameLib/obj2d_data.h"
+
 #include"ui.h"
 #include"sprite_data.h"
 #include"bg.h"
@@ -16,6 +21,8 @@
 #include"../GameLib/depth_stencil.h"
 #include"audio.h"
 
+using namespace GameLib;
+using namespace input;
 Game Game::instance_;
 
 bool hitStop;
@@ -43,12 +50,6 @@ VECTOR2 playerPos()
   }
 }
 
-
-
-
-
-
-
 void Game::deinit()
 {
     // 各マネージャの解放
@@ -67,7 +68,7 @@ void Game::deinit()
     delete ui_;
   }
     // テクスチャの解放
-    GameLib::texture::releaseAll();
+    //GameLib::texture::releaseAll();
 
     // 音楽のクリア
     GameLib::music::clear();
@@ -75,6 +76,20 @@ void Game::deinit()
 
 void Game::update()
 {
+
+    // wキー（PAD_UP）とsキー（PAD_DOWN）の同時押しでRESULTに切り替え
+    if ((STATE(0) & PAD_UP) && (STATE(0) & PAD_DOWN))
+    {
+        changeScene(Gameover::instance());
+        return; // これ以上の更新処理を防ぐために早期リターン
+    }
+
+    // wキー（PAD_UP）とsキー（PAD_DOWN）の同時押しでRESULTに切り替え
+    if ((STATE(0) & PAD_RIGHT) && (STATE(0) & PAD_LEFT))
+    {
+        changeScene(Result::instance());
+        return; // これ以上の更新処理を防ぐために早期リターン
+    }
 
     switch (state_)
     {
@@ -84,11 +99,12 @@ void Game::update()
         GameLib::music::play(MUSIC_GAME, false);
         
         timer_ = 0;
+        fade = 1.0f;
 
         GameLib::setBlendMode(GameLib::Blender::BS_ALPHA);   // 通常のアルファ処理
 
         // テクスチャの読み込み
-        GameLib::texture::load(loadTexture);
+        //texture::load(loadTexture);
 
         // プレイヤーマネージャの初期化
         obj2dManager()->init();
@@ -149,7 +165,12 @@ void Game::update()
 void Game::draw()
 {
     // 画面クリア
-    GameLib::clear(VECTOR4(0, 0, 1, 1));
+    GameLib::clear(VECTOR4(0, 0, 0, 1));
+
+    texture::begin(TEXNO::GAME);
+    texture::draw(TEXNO::GAME, { 0, 0 }, { 1, 1 }, { 0, 0 },
+        { BG::WINDOW_W, BG::WINDOW_H }, { 0, 0 });
+    texture::end(TEXNO::GAME);
     //DepthStencil::instance().set(DepthStencil::MODE::NONE);
     //DepthStencil::instance().set(DepthStencil::MODE::MASK);
 
@@ -165,10 +186,7 @@ void Game::draw()
     GameLib::primitive::line(900, 300, 1000, 400, 0, 1, 0, 1, 10);
     GameLib::primitive::line(1000, 400, 1200, 100, 0, 1, 0, 1, 10);
     GameLib::primitive::line(1200, 100, 1300, 900, 0, 1, 0, 1, 10);
-    
-
-
-  
+   
     //DepthStencil::instance().set(DepthStencil::MODE::EXCLUSIVE);
 }
 

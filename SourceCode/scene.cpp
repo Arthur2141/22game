@@ -69,6 +69,8 @@ void SceneManager::execute(Scene* scene)
         scene = scene->execute();
     }
 
+    GameLib::texture::releaseAll();
+
     // ゲームライブラリの終了処理
     GameLib::uninit();
 }

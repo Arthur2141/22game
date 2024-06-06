@@ -11,12 +11,14 @@
 #pragma comment( lib, "dxgi.lib" )
 #pragma comment( lib, "winmm.lib" )
 
+#if false
 #ifdef _DEBUG
-#pragma comment( lib, "./GameLib/Lib/Debug/DirectXTK.lib" )
-#pragma comment( lib, "./GameLib/Lib/Debug/DirectXTKAudioWin8.lib" )
+#pragma comment( lib, "../GameLib/Lib/Debug/DirectXTK.lib" )
+#pragma comment( lib, "../GameLib/Lib/Debug/DirectXTKAudioWin8.lib" )
 #else
-#pragma comment( lib, "./GameLib/Lib/Release/DirectXTK.lib" )
-#pragma comment( lib, "./GameLib/Lib/Release/DirectXTKAudioWin8.lib" )
+#pragma comment( lib, "../GameLib/Lib/Release/DirectXTK.lib" )
+#pragma comment( lib, "../GameLib/Lib/Release/DirectXTKAudioWin8.lib" )
+#endif
 #endif
 
 //------< インクルード >--------------------------------------------------------

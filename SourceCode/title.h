@@ -1,5 +1,7 @@
 #pragma once
 #include"scene.h"
+#ifndef INCLUDED_TITLE
+#define	INCLUDED_TITLE
 class Title : public Scene
 {
 private:
@@ -18,11 +20,14 @@ public:
 
 	static Title* instance() { return &instance_; }
 
+	void init(); 
+	void deinit();
 	void update() override;
 	void draw() override;
 
 private:
 	Title() {}
 	Title(const Title&) = delete;
-
 };
+
+#endif // !INCLUDED_TITLE

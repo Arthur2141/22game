@@ -3,7 +3,7 @@
 #include <vector>
 #include "../GameLib/vector.h"
 #include "../GameLib/obj2d_data.h"
-#include "../stage.h"
+//#include "../stage.h"
 class OBJ2D;
 
 enum class OBJ_TYPE
@@ -203,7 +203,7 @@ public:
     int state_ = 0;
     int timer_ = 0;
     int zOrder_ = 0;
-    StagePath targetP = {};
+    //StagePath targetP = {};
     std::shared_ptr<Behavior> behavior_ = nullptr;
     std::shared_ptr<Eraser> eraser_ = nullptr;
     std::shared_ptr<BG> bg_ = nullptr;
