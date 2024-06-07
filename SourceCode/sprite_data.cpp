@@ -15,12 +15,12 @@ GameLib::LoadTexture loadTexture[] =
 {
 	  { TEXNO::TITLE,              L"./Data/Images/title_select.png",        1U }, // タイトル
 
-   	  { TEXNO::TUTORIAL,           L"./Data/Images/Tutorial.png",       1U }, // チュートリアル
+   	  { TEXNO::TUTORIAL,           L"./Data/Images/Tutorial.png",            1U }, // チュートリアル
 
-	  { TEXNO::RESULT1,            L"./Data/Images/Result.png",       1U }, // リザルト
-	  { TEXNO::RESULT2,            L"./Data/Images/Result2.png",       1U }, 
+	  { TEXNO::RESULT1,            L"./Data/Images/Result.png",              1U }, // リザルト
+	  { TEXNO::RESULT2,            L"./Data/Images/Result2.png",             1U }, 
 
-	//{ TEXNO::GAMEOVER,         L"./Data/Images/.png",       1U }, //ゲームオーバー
+	  { TEXNO::GAMEOVER,           L"./Data/Images/Gameover.png",            1U }, //ゲームオーバー
 
 	  { TEXNO::GAME,              L"./Data/Images/stage_back.png",           1U },  // 背景
 
